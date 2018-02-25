@@ -40,18 +40,19 @@ public class StudentDB {
 	public void enroll(String className) {
 		// add class to classes array
 		for(int i = 0; i < classes.length; i++) {
-			
-			System.out.println("inloop " + classes[i]);
 			if(classes[i] == null) {
 				classes[i] = className;
 				break;
 			}
 		}
-		System.out.println(classes[0] + classes[1] + classes[2]);
+		balance = balance + 500;
+		System.out.println("You are now enrolled in " + className + ".\nPlease pay your balance of " + balance);
 	}
 	
-	public void pay() {
+	public void pay(int payment) {
 		// reduces balance, prints payment and balance
+		balance = balance - payment;
+		System.out.println("A payment for " + payment + " has been made.\nYour current balance is: " + balance);
 	}
 	
 	public void checkBalance() {
