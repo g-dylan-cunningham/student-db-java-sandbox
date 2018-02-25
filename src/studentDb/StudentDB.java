@@ -14,6 +14,7 @@ public class StudentDB {
 	private int balance = 0;
 	private static final String school = "Los Alamos University";
 	private static final int courseCost = 800;
+	private static final int registrationCost = 1200;
 	
 	// CLASS CONSTRUCTORS
 	public StudentDB(String name, String SSN) {
@@ -27,6 +28,8 @@ public class StudentDB {
 		String randomNum = getRandom() + "";
 		this.userId = id + randomNum + SSN.substring(5);
 		id++;
+		this.balance = registrationCost;
+		System.out.println("\nWelcome " + name + "! Your email is: " + email);
 	}
 	
 	// CLASS METHODS
@@ -65,7 +68,7 @@ public class StudentDB {
 	@Override
 	public String toString() {
 		// returns basic student info
-		return "\n[ Name: " + name + " ]\n[ SSN: " + SSN + " ]\n[ UserId: " + userId + " ]\n[ " + city + " " + state + " " + phone + " " + email + " ]\n[ Institue: " + school + " ]";
+		return "[ Name: " + name + " ]\n[ SSN: " + SSN + " ]\n[ UserId: " + userId + " ]\n[ " + city + " " + state + " " + phone + " " + email + " ]\n[ Balance: " + balance + " ]\n[ Institue: " + school + " ]";
 		
 	}
 	
