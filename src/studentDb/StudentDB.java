@@ -69,5 +69,11 @@ public class StudentDB {
 	
 	public void showCourses() {
 		// prints all currently enrolled courses
+		System.out.print("You are currently enrolled in:");
+		for(int i = 0; i < classes.length; i++) {
+			if (classes[i] != null) {
+				System.out.print(" " + classes[i]);
+			}
+		}
 	}
 }
