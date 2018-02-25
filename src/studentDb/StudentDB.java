@@ -13,6 +13,7 @@ public class StudentDB {
 	private String[] classes = new String[8];
 	private int balance = 0;
 	private static final String school = "Los Alamos University";
+	private static final int courseCost = 800;
 	
 	// CLASS CONSTRUCTORS
 	public StudentDB(String name, String SSN) {
@@ -34,11 +35,7 @@ public class StudentDB {
 		int max = 9000;
 		int min = 1000;
 		int random = (int) (Math.random() * (max - min) + min);
-//		if(random > 1000 && random < 9000) {
-//			return random;
-//		} else {
-//			return getRandom();
-//		}
+
 		return random;
 	}
 	
@@ -50,7 +47,7 @@ public class StudentDB {
 				break;
 			}
 		}
-		balance = balance + 500;
+		balance = balance + courseCost;
 		System.out.println("You are now enrolled in " + className + ".\nPlease pay your balance of " + balance);
 	}
 	
