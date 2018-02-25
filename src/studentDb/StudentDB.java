@@ -63,7 +63,7 @@ public class StudentDB {
 	@Override
 	public String toString() {
 		// returns basic student info
-		return "[Name: " + name + "]\n[SSN: " + SSN + "]\n [UserId: " + userId + "]";
+		return "\n[ Name: " + name + " ]\n[ SSN: " + SSN + " ]\n[ UserId: " + userId + " ]\n[ " + city + " " + state + " " + phone + " " + email + " ]\n[ Institue: " + school + " ]";
 		
 	}
 	
