@@ -57,6 +57,7 @@ public class StudentDB {
 	
 	public void checkBalance() {
 		// prints current balance
+		System.out.println("Your current balance is " + balance);
 	}
 	
 	@Override
