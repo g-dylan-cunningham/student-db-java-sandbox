@@ -22,8 +22,8 @@ public class StudentDB {
 		this.name = name;
 		
 		email = name + "@losAlamos.edu";
-		int randomNum = getRandom();
-		
+		String randomNum = getRandom() + "";
+		this.userId = id + randomNum + SSN.substring(4);
 	}
 	
 	// CLASS METHODS
@@ -34,7 +34,6 @@ public class StudentDB {
 		} else {
 			return getRandom();
 		}
-		
 	}
 	
 	
@@ -53,7 +52,7 @@ public class StudentDB {
 	@Override
 	public String toString() {
 		// returns basic student info
-		return "[Name: " + name + "]\n[SSN: " + SSN + "]";
+		return "[Name: " + name + "]\n[SSN: " + SSN + "]\n [UserId: " + userId + "]";
 		
 	}
 	
