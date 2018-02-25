@@ -22,7 +22,7 @@ public class StudentDB {
 		this.SSN = SSN;
 		this.name = name;
 		
-		email = name + "@losAlamos.edu";
+		email = name.toLowerCase() + id + "." + "@losAlamos.edu";
 		String randomNum = getRandom() + "";
 		this.userId = id + randomNum + SSN.substring(5);
 		id++;
