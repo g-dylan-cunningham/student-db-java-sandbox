@@ -16,6 +16,9 @@ public class StudentDBApp {
 		stud1.setState("AZ");
 		stud1.setPhone("4802349876");
 		System.out.println(stud1.toString());
+		
+		StudentDB stud2 = new StudentDB("Michelle", "342097746");
+		System.out.println(stud2);
 	}
 
 }

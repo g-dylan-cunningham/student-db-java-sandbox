@@ -2,7 +2,7 @@ package studentDb;
 
 public class StudentDB {
 	// CLASS ATTRIBUTES
-	private int id = 1000;
+	private static int id = 1000;
 	public String userId;
 	private String SSN;
 	public String name;
@@ -18,23 +18,28 @@ public class StudentDB {
 	public StudentDB(String name, String SSN) {
 		// Generate a user ID that is combination of Static ID, random 
 		// 4-digit number between 1000 and 9000, and last 4 of SSN
+
 		this.SSN = SSN;
 		this.name = name;
 		
 		email = name + "@losAlamos.edu";
 		String randomNum = getRandom() + "";
 		this.userId = id + randomNum + SSN.substring(5);
+		id++;
 	}
 	
 	// CLASS METHODS
 	private int getRandom() {
 		//	get random int between 1000 - 9000
-		int random = (int) (Math.random() * 10000);
-		if(random > 1000 && random < 9000) {
-			return random;
-		} else {
-			return getRandom();
-		}
+		int max = 9000;
+		int min = 1000;
+		int random = (int) (Math.random() * (max - min) + min);
+//		if(random > 1000 && random < 9000) {
+//			return random;
+//		} else {
+//			return getRandom();
+//		}
+		return random;
 	}
 	
 	public void enroll(String className) {
